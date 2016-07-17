@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="book.css">
+	<script type="text/javascript">
+	var imagecount=1;
+	var total=10;
+	var image=document.getElementById("firstpage");
+
+	function slide(x) {
+		var image=document.getElementById("firstpage");
+		imagecount=imagecount+x;
+		if(imagecount<=0)
+		{
+		}
+		else if(imagecount<10){
+		image.src="english/"+imagecount+".jpg";
+		}
+
+		// body...
+	}
+
+	
+		
+
+		
+		
+		
+		
+	
+		
+
+
+
+	</script>
+</head>
+<body>
+<div id="container">
+  <div id="left"><img class="lf" src="4.png" onClick="slide(-1);"></div>
+  <img src="english/1.jpg" width="542" id="firstpage">
+
+<div id="right"><img class="arr" src="3.png" onClick="slide(1);"></div>
+<center>
+<br>
+
+</center>
+</div>
+
+
+
+
+</body>
+</html>

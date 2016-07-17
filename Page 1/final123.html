@@ -1,0 +1,88 @@
+<!doctype>
+<html>
+
+<head runat="server">
+
+<link rel="stylesheet" href="css/hackathon page 4.css">
+
+
+
+
+
+
+			
+ </script>           
+			
+
+
+</head>
+
+<body>
+<header>
+<div id="tape"><ul><br /><hr><br>
+
+<form>
+
+<input name="Submit" type="submit" id="save" />
+</form>
+ <br /><hr id="hr">
+
+
+</ul>  </div>
+
+
+</header>
+
+<div id="box">
+ 
+   <div id="mainreader">
+   <frameset >
+   <iframe src="book.html" width="700px" height="700px"></iframe>
+   </frameset>
+   </div>
+ 
+ 
+   <div id="leftfloater">
+   </div>
+ 
+   
+   <div id="chat">
+    <div id="chatname"><strong><center>CHAT BOX</center></strong></div>
+    <br>
+    <br>
+  <center>
+ <button id="online" onclick="readers()"></button>
+ </center>
+ <h3>&nbsp;&nbsp;Find your Coordinates and friends</h3>
+ <script>
+var x = document.getElementById("online");
+
+function readers() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+}
+	
+
+</script>
+   </div>
+   
+
+</div>
+
+
+
+
+
+</body>
+
+
+
+</html>
